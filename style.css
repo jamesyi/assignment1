@@ -1,0 +1,328 @@
+ @charset "UTF-8";
+/* CSS Document */
+
+
+/*.container img.wide {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}*/
+/*.container img.tall {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+}​*/
+
+body{
+    width:100%;
+    height: 100%;
+	background-attachment:fixed;
+	background-size:cover;
+	background-position:center;
+	background-repeat: no-repeat;
+	font-family:"Calibri (Body)";
+
+}
+
+#nowplaying{
+width:150px;
+	height:150px;
+	-webkit-filter: grayscale(90%);
+	border-radius:10px;
+	box-shadow: 2px 2px 1px;	
+	
+	
+}
+
+.albumthumb{
+	width:200px;
+	height:200px;
+	-webkit-filter: grayscale(90%);
+	
+	box-shadow: 2px 2px 1px;
+	
+}
+.albumthumb:hover{
+	
+	-webkit-filter: grayscale(0%);
+}
+a:link {
+	text-decoration:none;
+	}
+
+#scroll{
+	margin: auto;
+position: absolute;
+top: 0; left: 0; bottom: 0; right: 0;
+
+   width: 78.5%;
+    height: 625px;
+    overflow: hidden;
+    overflow-x: hidden;
+	overflow-y: hidden;
+	z-index: 2;
+ 
+}
+
+#tbl{
+	
+	 margin: 0 0 0 0;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+/*#tbl{
+	
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+#scroll
+{
+margin: auto;
+position: absolute;
+top: 0; left: 0; bottom: 0; right: 0;
+
+   width: 78.5%;
+    height: 550px;
+    overflow: scroll;
+    overflow-x: hidden;
+	overflow-y: hidden;
+   overflow: scroll;
+  
+}
+ */  
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+
+
+
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+  z-index: 1;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+  z-index: 1;
+-webkit-filter: grayscale(0.7) blur(5px);
+
+}
+
+/*#bg{
+	background-color:red;
+	
+	
+	
+	
+}
+
+#bg, #bgimg{
+	
+	width:100%;
+	height:100%;
+	min-width:60%;
+	min-height:60%;
+
+}
+*/
+@font-face
+{
+	font-family: Regencie;
+	src: url('fonts/RegencieLight');
+}
+#guide{
+	
+	position:relative;
+				background-color:black;
+				height:1px;
+				width:280px;
+				top:-57.5px;
+				right:-15px;
+				
+}
+
+#songname{
+	
+	
+	background-color:white;
+	z-index:4;
+	color:black;
+	
+    
+	position: fixed;
+    
+    display:inline-block;
+	
+	font-family: Regencie;
+	
+	bottom:10px;
+	right:10px;
+	
+	
+	
+}
+#ctrcontainer{
+	height:125px;
+	width:500px;
+	box-shadow: 2px 2px 1px;
+	
+	
+}
+#thumbpic{
+	height:125px;
+	width:125px;
+	float:left;
+	
+}
+#namecontainer{
+	width:375px;
+	height:125px;
+	float:right;
+	font-size:20px;
+	
+	
+}
+pre
+{
+	position:relative;
+	font-family: Regencie;
+	inline-height:20px;
+	right:-15px;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	
+}
+
+/*pre
+{
+	font-family: Regencie;
+	inline-height:20px;
+	float:right;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	max-width:280px;
+	right:-47.5px;
+}*/
+#playpausebtn{
+	
+	position: fixed;
+    width: 150px;
+    border: solid 1px #e1e1e1;
+    vertical-align: middle;
+    
+    text-align: center;
+	
+}
+
+#circle{
+	border-radius:50%;
+	
+}
+#musicbar{
+	position:absolute;
+}
+
+#progressBar { 
+				width:280px;
+			}
+			#progress {
+				position:relative;
+				background-color:black;
+				height:5px;
+				display:inline-block;
+				top:-50px;
+				right:-15px;
+				
+			}
+
+#pause{
+	position:fixed;
+	float:right;
+	bottom:12px;
+	right:12px;
+	width:30px;
+	height:30px;
+	/*background-color:#F3B562;*/
+}
+
+#delete{
+	position:fixed;
+	float:right;
+	bottom:14.5px;
+	right:48px;
+	width:25px;
+	height:25px;
+	/*background-color:#F3B562;*/
+}
+
+#fav{
+	position:fixed;
+	float:right;
+	bottom:14.5px;
+	right:84px;
+	width:25px;
+	height:25px;
+	/*background-color:#F3B562;*/
+}
+
+#pause:hover{
+	opacity:0.2;
+}
+#delete:hover{
+	opacity:0.2;
+}
+#fav:hover{
+	opacity:0.2;
+}
+#playlist{
+	width:300px;
+	height:40px;
+	
+	color:black;
+	z-index:-1;
+	font-size:32px;
+	opacity:0.8;
+	font-family: Regencie;
+}
+
+.loading {
+    background: url('http://iamchriscollins.com/loading.gif') no-repeat center center;
+}
+section {
+    opacity: 0;
+    -webkit-transition:opacity .6s;
+    -moz-transition:opacity .6s;
+    -o-transition:opacity .6s;
+    transition: opacity .6s;
+}
+.loaded section {
+    opacity: 1;
+}
+
+#login{
+	position:fixed;
+	z-index:5;
+	width:300px;
+	height:40px;
+	right:-4.25%;
+	color:black;
+	z-index:5;
+	font-size:20px;
+	top:20px;
+	
+	font-family: Regencie;
+}

@@ -1,0 +1,431 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<link rel="stylesheet" type="text/css" href="onepage-scroll.css">
+<link rel="stylesheet" type="text/css" href="pageslide.css">
+
+</head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+<script type="text/javascript" src="flippy.js"></script>
+
+
+<script type="text/javascript" src="iscroll.js"></script>
+
+<script type="text/javascript" src="yes.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".albumthumb").dblclick(function() {
+        $(this).flippy({
+            content : "<img src='playingpic.gif'/>",
+           	
+            onStart : function() {
+                
+            },
+            onFinish : function() {
+                
+            }
+        });
+		
+		
+		
+    });
+	
+	
+});
+
+
+
+
+
+$(document).ready(function(){
+
+
+
+  $('img').dblclick(function(){
+	  var src = $(this).attr('src');
+	  console.log(src);
+	  $('#imgblur').attr('src',src);
+	  
+  });
+  
+  
+  
+  
+  $('img').dblclick(function(){
+	  var src = $(this).attr('alt');
+	  console.log(src);
+	  $(".audio").attr('src',src);
+	 
+  });
+  
+  
+  
+  
+  $('img').dblclick(function(){
+	  var src = $(this).attr('title');
+	  var src2= $(this).attr('src');
+	  $('#songname').hide().html("<div id='ctrcontainer'><div id='thumbpic'><img src='"+src2+"' width='125' height='125'/></div><div id='namecontainer'><pre>"+src+"</pre><br><div id='controls'><div id='progressBar'><span id='progress'></span></div><div id='guide'></div><img src='icons/pause.png' onclick='aud_play_pause()' id='pause'/><img src='icons/delete.png'  id='delete'/><img src='icons/favourite.png'  id='fav'/><img src='icons/delete.png'  id='delete'/></div></div></div>").fadeIn(500);
+	  /*$('#music').html('src','url('+src+')');*/
+  });
+  
+ 
+  
+});
+
+</script>
+
+<script type="text/javascript">
+
+var myScroll;
+function loaded() {
+	myScroll = new iScroll('scroll',
+	{
+		hideScrollbar:true,
+		hScroll:true, 
+        bounce:true,
+        lockDirection:true,
+	
+	});
+	
+}
+
+
+
+
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+document.addEventListener('DOMContentLoaded', loaded, false);
+
+</script>
+<script>
+$(document).ready(function() {
+
+$(".wrapper").onepage_scroll({
+   sectionContainer: "section", 
+   easing: "ease",
+   animationTime: 1000,
+   pagination: true,
+   updateURL: false
+});
+});
+
+
+
+$(window).load(function() {
+    // start up after 2sec no matter what
+    window.setTimeout(function(){
+        $('body').removeClass("loading").addClass('loaded');
+    }, 3000);
+	
+});
+
+</script>
+<body class="loading">
+
+
+
+
+
+<!--<div id="bg">
+<img id='bgimg' src="background.jpg"/>-->
+<a href="bar.html" class="first"><div id='login'>Log In</div></a>
+<div class='wrapper'>
+
+<section>
+
+<div id="scroll">
+
+<table id="tbl">
+	 
+  <tr>
+  	<td class="tdclass"><img title="明明就<br><font size='2'>Jay Chou</font>" alt="music/2.mp3" class="albumthumb" src="images/2.jpg"/></td>
+    <td class="tdclass"><img title="Let's Ride<br><font size='2'>The Game</font>" alt="music/5.mp3" class="albumthumb" src="images/5.jpg"/></td>
+    <td class="tdclass"><img title="Boys and Girls<br><font size='2'>浜崎あゆみ</font>" alt="music/10.mp3" class="albumthumb" src="images/10.jpg"/></td>
+    <td class="tdclass"><img title="Crow Song<br><font size='2'>ガルデモ</font>" alt="music/3.mp3" class="albumthumb" src="images/3.jpg"/></td>
+    <td class="tdclass"><img title="Core Pride<br><font size='2'>UVERworld</font>" alt="music/18.mp3" class="albumthumb" src="images/18.jpg"/></td>
+    <td class="tdclass"><img title="American Idiot<br><font size='2'>Green Day</font>" alt="music/4.mp3" class="albumthumb" src="images/4.jpg"/></td>
+    <td class="tdclass"><img title="Survival<br><font size='2'>Eminem</font>" alt="music/9.mp3" class="albumthumb" src="images/9.jpg"/></td>
+    <td class="tdclass"><img title="ブラック☆ロックシューター<br><font size='2'>Supercell</font>" alt="music/7.mp3" class="albumthumb" src="images/7.jpg"/></td>
+    <td class="tdclass"><img title="Let's Ride<br><font size='2'>The Game</font>" alt="music/5.mp3" class="albumthumb" src="images/5.jpg"/></td>
+    <td class="tdclass"><img title="Good Time<br><font size='2'>Owl City</font>" alt="music/1.mp3" class="albumthumb" src="images/1.jpg"/></td>
+    <td class="tdclass"><img title="Feel My Soul<br><font size='2'>YUI</font>" alt="music/6.mp3" class="albumthumb" src="images/6.jpg"/></td>
+    <td class="tdclass"><img title="Love and Roll<br><font size='2'>Supercell</font>" alt="music/15.mp3" class="albumthumb" src="images/15.jpg"/></td>
+    <td class="tdclass"><img title="By The Way<br><font size='2'>Red Hot Chilli Peppers</font>" alt="music/14.mp3" class="albumthumb" src="images/14.jpg"/></td>
+    <td class="tdclass"><img title="What You Know<br><font size='2'>T.I.</font>" alt="music/16.mp3" class="albumthumb" src="images/16.jpg"/></td>
+    <td class="tdclass"><img title="F*** With Me You Know You Got It<br><font size='2'>Jay Z</font>" alt="music/12.mp3" class="albumthumb" src="images/12.jpg"/></td>
+    <td class="tdclass"><img title="Sister's Noise<br><font size='2'>FripSide</font>" alt="music/11.mp3" class="albumthumb" src="images/11.jpg"/></td>
+  </tr>
+  <tr>
+    <td class="tdclass"><img title="Feel My Soul<br><font size='2'>YUI</font>" alt="music/6.mp3" class="albumthumb" src="images/6.jpg"/></td>
+    <td class="tdclass"><img title="Underclass Hero<br><font size='2'>Sum41</font>" alt="music/17.mp3" class="albumthumb" src="images/17.jpg"/></td>
+    <td class="tdclass"><img title="What You Know<br><font size='2'>T.I.</font>" alt="music/16.mp3" class="albumthumb" src="images/16.jpg"/></td>
+    <td class="tdclass"><img title="君の知らない物語<br><font size='2'>Supercell</font>" alt="music/21.mp3" class="albumthumb" src="images/21.jpg"/></td>
+    <td class="tdclass"><img title="Fragrant Rice<br><font size='2'>Jay Chou</font>" alt="music/20.mp3" class="albumthumb" src="images/20.jpg"/></td>
+    <td class="tdclass"><img title="ブラック☆ロックシューター<br><font size='2'>Supercell</font>" alt="music/7.mp3" class="albumthumb" src="images/7.jpg"/></td>
+    <td class="tdclass"><img title="Good Time<br><font size='2'>Owl City</font>" alt="music/1.mp3" class="albumthumb" src="images/1.jpg"/></td>
+    <td class="tdclass"><img title="Tik Tok<br><font size='2'>Ke$ha</font>" alt="music/19.mp3" class="albumthumb" src="images/19.jpg"/></td>
+    <td class="tdclass"><img title="Sister's Noise<br><font size='2'>FripSide</font>" alt="music/11.mp3" class="albumthumb" src="images/11.jpg"/></td>
+    <td class="tdclass"><img title="Boys and Girls<br><font size='2'>浜崎あゆみ</font>" alt="music/10.mp3" class="albumthumb" src="images/10.jpg"/></td>
+    <td class="tdclass"><img title="F*** With Me You Know You Got It<br><font size='2'>Jay Z</font>" alt="music/12.mp3" class="albumthumb" src="images/12.jpg"/></td>
+    <td class="tdclass"><img title="Ignorance<br><font size='2'>Paramore</font>" alt="music/13.mp3" class="albumthumb" src="images/13.jpg"/></td>
+    <td class="tdclass"><img title="What You Know<br><font size='2'>T.I.</font>" alt="music/16.mp3" class="albumthumb" src="images/16.jpg"/></td>
+    <td class="tdclass"><img title="Core Pride<br><font size='2'>UVERworld</font>" alt="music/18.mp3" class="albumthumb" src="images/18.jpg"/></td>
+    <td class="tdclass"><img title="Tik Tok<br><font size='2'>Ke$ha</font>" alt="music/19.mp3" class="albumthumb" src="images/19.jpg"/></td>
+    <td class="tdclass"><img title="Good Time<br><font size='2'>Owl City</font>" alt="music/1.mp3" class="albumthumb" src="images/1.jpg"/></td>
+  </tr>
+  <tr>
+   	<td class="tdclass"><img title="F*** With Me You Know You Got It<br><font size='2'>Jay Z</font>" alt="music/12.mp3" class="albumthumb" src="images/12.jpg"/></td>
+    <td class="tdclass"><img title="Sister's Noise<br><font size='2'>FripSide</font>" alt="music/11.mp3" class="albumthumb" src="images/11.jpg"/></td>
+    <td class="tdclass"><img title="Love and Roll<br><font size='2'>Supercell</font>" alt="music/15.mp3" alt="music/15.mp3" class="albumthumb" src="images/15.jpg"/></td>
+    <td class="tdclass"><img title="Ignorance<br><font size='2'>Paramore</font>" alt="music/13.mp3" class="albumthumb" src="images/13.jpg"/></td>
+    <td class="tdclass"><img title="By The Way<br><font size='2'>Red Hot Chilli Peppers</font>" alt="music/14.mp3" class="albumthumb" src="images/14.jpg"/></td>
+    <td class="tdclass"><img title="King Sh*t<br><font size='2'>Yo Gotti Feat. T.I.</font>" alt="music/8.mp3" class="albumthumb" src="images/8.jpg"/></td>
+    <td class="tdclass"><img title="Boys and Girls<br><font size='2'>浜崎あゆみ</font>" alt="music/10.mp3" class="albumthumb" src="images/10.jpg"/></td>
+    <td class="tdclass"><img title="明明就<br><font size='2'>Jay Chou</font>" alt="music/2.mp3" class="albumthumb" src="images/2.jpg"/></td>
+    <td class="tdclass"><img title="Crow Song<br><font size='2'>ガルデモ</font>" alt="music/3.mp3" class="albumthumb" src="images/3.jpg"/></td>
+    <td class="tdclass"><img title="Let's Ride<br><font size='2'>The Game</font>" alt="music/5.mp3" class="albumthumb" src="images/5.jpg"/></td>
+    <td class="tdclass"><img title="ブラック☆ロックシューター<br><font size='2'>Supercell</font>" alt="music/7.mp3" class="albumthumb" src="images/7.jpg"/></td>
+    <td class="tdclass"><img title="King Sh*t<br><font size='2'>Yo Gotti Feat. T.I.</font>" alt="music/8.mp3" class="albumthumb" src="images/8.jpg"/></td>
+    <td class="tdclass"><img title="Boys and Girls<br><font size='2'>浜崎あゆみ</font>" alt="music/10.mp3" class="albumthumb" src="images/10.jpg"/></td>
+    <td class="tdclass"><img title="Good Time<br><font size='2'>Owl City</font>" alt="music/1.mp3" class="albumthumb" src="images/1.jpg"/></td>
+    <td class="tdclass"><img title="ブラック☆ロックシューター<br><font size='2'>Supercell</font>" alt="music/7.mp3" class="albumthumb" src="images/7.jpg"/></td>
+    <td class="tdclass"><img title="Feel My Soul<br><font size='2'>YUI</font>" alt="music/6.mp3" class="albumthumb" src="images/6.jpg"/></td>
+  </tr>
+  
+  
+  
+</table>
+
+<!--<div id="playlist">Playlist One</div>-->
+</div>
+
+</section>
+
+<section>
+
+<div id="scroll">
+
+<table id="tbl">
+	 
+  <tr>
+  	<td class="tdclass"><img title="明明就<br><font size='2'>Jay Chou</font>" alt="music/2.mp3" class="albumthumb" src="images/2.jpg"/></td>
+    <td class="tdclass"><img title="Let's Ride<br><font size='2'>The Game</font>" alt="music/5.mp3" class="albumthumb" src="images/5.jpg"/></td>
+    <td class="tdclass"><img title="Boys and Girls<br><font size='2'>浜崎あゆみ</font>" alt="music/10.mp3" class="albumthumb" src="images/10.jpg"/></td>
+    <td class="tdclass"><img title="Crow Song<br><font size='2'>ガルデモ</font>" alt="music/3.mp3" class="albumthumb" src="images/3.jpg"/></td>
+    <td class="tdclass"><img title="Core Pride<br><font size='2'>UVERworld</font>" alt="music/18.mp3" class="albumthumb" src="images/18.jpg"/></td>
+    <td class="tdclass"><img title="American Idiot<br><font size='2'>Green Day</font>" alt="music/4.mp3" class="albumthumb" src="images/4.jpg"/></td>
+    <td class="tdclass"><img title="Survival<br><font size='2'>Eminem</font>" alt="music/9.mp3" class="albumthumb" src="images/9.jpg"/></td>
+    <td class="tdclass"><img title="ブラック☆ロックシューター<br><font size='2'>Supercell</font>" alt="music/7.mp3" class="albumthumb" src="images/7.jpg"/></td>
+    <td class="tdclass"><img title="Let's Ride<br><font size='2'>The Game</font>" alt="music/5.mp3" class="albumthumb" src="images/5.jpg"/></td>
+    <td class="tdclass"><img title="Good Time<br><font size='2'>Owl City</font>" alt="music/1.mp3" class="albumthumb" src="images/1.jpg"/></td>
+    <td class="tdclass"><img title="Feel My Soul<br><font size='2'>YUI</font>" alt="music/6.mp3" class="albumthumb" src="images/6.jpg"/></td>
+    <td class="tdclass"><img title="Love and Roll<br><font size='2'>Supercell</font>" alt="music/15.mp3" class="albumthumb" src="images/15.jpg"/></td>
+    <td class="tdclass"><img title="By The Way<br><font size='2'>Red Hot Chilli Peppers</font>" alt="music/14.mp3" class="albumthumb" src="images/14.jpg"/></td>
+    <td class="tdclass"><img title="What You Know<br><font size='2'>T.I.</font>" alt="music/16.mp3" class="albumthumb" src="images/16.jpg"/></td>
+    <td class="tdclass"><img title="F*** With Me You Know You Got It<br><font size='2'>Jay Z</font>" alt="music/12.mp3" class="albumthumb" src="images/12.jpg"/></td>
+    <td class="tdclass"><img title="Sister's Noise<br><font size='2'>FripSide</font>" alt="music/11.mp3" class="albumthumb" src="images/11.jpg"/></td>
+  </tr>
+  <tr>
+    <td class="tdclass"><img title="Feel My Soul<br><font size='2'>YUI</font>" alt="music/6.mp3" class="albumthumb" src="images/6.jpg"/></td>
+    <td class="tdclass"><img title="Underclass Hero<br><font size='2'>Sum41</font>" alt="music/17.mp3" class="albumthumb" src="images/17.jpg"/></td>
+    <td class="tdclass"><img title="What You Know<br><font size='2'>T.I.</font>" alt="music/16.mp3" class="albumthumb" src="images/16.jpg"/></td>
+    <td class="tdclass"><img title="君の知らない物語<br><font size='2'>Supercell</font>" alt="music/21.mp3" class="albumthumb" src="images/21.jpg"/></td>
+    <td class="tdclass"><img title="Fragrant Rice<br><font size='2'>Jay Chou</font>" alt="music/20.mp3" class="albumthumb" src="images/20.jpg"/></td>
+    <td class="tdclass"><img title="ブラック☆ロックシューター<br><font size='2'>Supercell</font>" alt="music/7.mp3" class="albumthumb" src="images/7.jpg"/></td>
+    <td class="tdclass"><img title="Good Time<br><font size='2'>Owl City</font>" alt="music/1.mp3" class="albumthumb" src="images/1.jpg"/></td>
+    <td class="tdclass"><img title="Tik Tok<br><font size='2'>Ke$ha</font>" alt="music/19.mp3" class="albumthumb" src="images/19.jpg"/></td>
+    <td class="tdclass"><img title="Sister's Noise<br><font size='2'>FripSide</font>" alt="music/11.mp3" class="albumthumb" src="images/11.jpg"/></td>
+    <td class="tdclass"><img title="Boys and Girls<br><font size='2'>浜崎あゆみ</font>" alt="music/10.mp3" class="albumthumb" src="images/10.jpg"/></td>
+    <td class="tdclass"><img title="F*** With Me You Know You Got It<br><font size='2'>Jay Z</font>" alt="music/12.mp3" class="albumthumb" src="images/12.jpg"/></td>
+    <td class="tdclass"><img title="Ignorance<br><font size='2'>Paramore</font>" alt="music/13.mp3" class="albumthumb" src="images/13.jpg"/></td>
+    <td class="tdclass"><img title="What You Know<br><font size='2'>T.I.</font>" alt="music/16.mp3" class="albumthumb" src="images/16.jpg"/></td>
+    <td class="tdclass"><img title="Core Pride<br><font size='2'>UVERworld</font>" alt="music/18.mp3" class="albumthumb" src="images/18.jpg"/></td>
+    <td class="tdclass"><img title="Tik Tok<br><font size='2'>Ke$ha</font>" alt="music/19.mp3" class="albumthumb" src="images/19.jpg"/></td>
+    <td class="tdclass"><img title="Good Time<br><font size='2'>Owl City</font>" alt="music/1.mp3" class="albumthumb" src="images/1.jpg"/></td>
+  </tr>
+  <tr>
+   	<td class="tdclass"><img title="F*** With Me You Know You Got It<br><font size='2'>Jay Z</font>" alt="music/12.mp3" class="albumthumb" src="images/12.jpg"/></td>
+    <td class="tdclass"><img title="Sister's Noise<br><font size='2'>FripSide</font>" alt="music/11.mp3" class="albumthumb" src="images/11.jpg"/></td>
+    <td class="tdclass"><img title="Love and Roll<br><font size='2'>Supercell</font>" alt="music/15.mp3" alt="music/15.mp3" class="albumthumb" src="images/15.jpg"/></td>
+    <td class="tdclass"><img title="Ignorance<br><font size='2'>Paramore</font>" alt="music/13.mp3" class="albumthumb" src="images/13.jpg"/></td>
+    <td class="tdclass"><img title="By The Way<br><font size='2'>Red Hot Chilli Peppers</font>" alt="music/14.mp3" class="albumthumb" src="images/14.jpg"/></td>
+    <td class="tdclass"><img title="King Sh*t<br><font size='2'>Yo Gotti Feat. T.I.</font>" alt="music/8.mp3" class="albumthumb" src="images/8.jpg"/></td>
+    <td class="tdclass"><img title="Boys and Girls<br><font size='2'>浜崎あゆみ</font>" alt="music/10.mp3" class="albumthumb" src="images/10.jpg"/></td>
+    <td class="tdclass"><img title="明明就<br><font size='2'>Jay Chou</font>" alt="music/2.mp3" class="albumthumb" src="images/2.jpg"/></td>
+    <td class="tdclass"><img title="Crow Song<br><font size='2'>ガルデモ</font>" alt="music/3.mp3" class="albumthumb" src="images/3.jpg"/></td>
+    <td class="tdclass"><img title="Let's Ride<br><font size='2'>The Game</font>" alt="music/5.mp3" class="albumthumb" src="images/5.jpg"/></td>
+    <td class="tdclass"><img title="ブラック☆ロックシューター<br><font size='2'>Supercell</font>" alt="music/7.mp3" class="albumthumb" src="images/7.jpg"/></td>
+    <td class="tdclass"><img title="King Sh*t<br><font size='2'>Yo Gotti Feat. T.I.</font>" alt="music/8.mp3" class="albumthumb" src="images/8.jpg"/></td>
+    <td class="tdclass"><img title="Boys and Girls<br><font size='2'>浜崎あゆみ</font>" alt="music/10.mp3" class="albumthumb" src="images/10.jpg"/></td>
+    <td class="tdclass"><img title="Good Time<br><font size='2'>Owl City</font>" alt="music/1.mp3" class="albumthumb" src="images/1.jpg"/></td>
+    <td class="tdclass"><img title="ブラック☆ロックシューター<br><font size='2'>Supercell</font>" alt="music/7.mp3" class="albumthumb" src="images/7.jpg"/></td>
+    <td class="tdclass"><img title="Feel My Soul<br><font size='2'>YUI</font>" alt="music/6.mp3" class="albumthumb" src="images/6.jpg"/></td>
+  </tr>
+  
+  
+</table>
+
+<div id="playlist">Playlist Two</div>	 
+</div>
+
+</section>
+
+<section>
+
+<div id="scroll">
+
+<table id="tbl">
+	 
+  <tr>
+  	<td class="tdclass"><img title="明明就<br><font size='2'>Jay Chou</font>" alt="music/2.mp3" class="albumthumb" src="images/2.jpg"/></td>
+    <td class="tdclass"><img title="Let's Ride<br><font size='2'>The Game</font>" alt="music/5.mp3" class="albumthumb" src="images/5.jpg"/></td>
+    <td class="tdclass"><img title="Boys and Girls<br><font size='2'>浜崎あゆみ</font>" alt="music/10.mp3" class="albumthumb" src="images/10.jpg"/></td>
+    <td class="tdclass"><img title="Crow Song<br><font size='2'>ガルデモ</font>" alt="music/3.mp3" class="albumthumb" src="images/3.jpg"/></td>
+    <td class="tdclass"><img title="Core Pride<br><font size='2'>UVERworld</font>" alt="music/18.mp3" class="albumthumb" src="images/18.jpg"/></td>
+    <td class="tdclass"><img title="American Idiot<br><font size='2'>Green Day</font>" alt="music/4.mp3" class="albumthumb" src="images/4.jpg"/></td>
+    <td class="tdclass"><img title="Survival<br><font size='2'>Eminem</font>" alt="music/9.mp3" class="albumthumb" src="images/9.jpg"/></td>
+    <td class="tdclass"><img title="ブラック☆ロックシューター<br><font size='2'>Supercell</font>" alt="music/7.mp3" class="albumthumb" src="images/7.jpg"/></td>
+    <td class="tdclass"><img title="Let's Ride<br><font size='2'>The Game</font>" alt="music/5.mp3" class="albumthumb" src="images/5.jpg"/></td>
+    <td class="tdclass"><img title="Good Time<br><font size='2'>Owl City</font>" alt="music/1.mp3" class="albumthumb" src="images/1.jpg"/></td>
+    <td class="tdclass"><img title="Feel My Soul<br><font size='2'>YUI</font>" alt="music/6.mp3" class="albumthumb" src="images/6.jpg"/></td>
+    <td class="tdclass"><img title="Love and Roll<br><font size='2'>Supercell</font>" alt="music/15.mp3" class="albumthumb" src="images/15.jpg"/></td>
+    <td class="tdclass"><img title="By The Way<br><font size='2'>Red Hot Chilli Peppers</font>" alt="music/14.mp3" class="albumthumb" src="images/14.jpg"/></td>
+    <td class="tdclass"><img title="What You Know<br><font size='2'>T.I.</font>" alt="music/16.mp3" class="albumthumb" src="images/16.jpg"/></td>
+    <td class="tdclass"><img title="F*** With Me You Know You Got It<br><font size='2'>Jay Z</font>" alt="music/12.mp3" class="albumthumb" src="images/12.jpg"/></td>
+    <td class="tdclass"><img title="Sister's Noise<br><font size='2'>FripSide</font>" alt="music/11.mp3" class="albumthumb" src="images/11.jpg"/></td>
+  </tr>
+  <tr>
+    <td class="tdclass"><img title="Feel My Soul<br><font size='2'>YUI</font>" alt="music/6.mp3" class="albumthumb" src="images/6.jpg"/></td>
+    <td class="tdclass"><img title="Underclass Hero<br><font size='2'>Sum41</font>" alt="music/17.mp3" class="albumthumb" src="images/17.jpg"/></td>
+    <td class="tdclass"><img title="What You Know<br><font size='2'>T.I.</font>" alt="music/16.mp3" class="albumthumb" src="images/16.jpg"/></td>
+    <td class="tdclass"><img title="君の知らない物語<br><font size='2'>Supercell</font>" alt="music/21.mp3" class="albumthumb" src="images/21.jpg"/></td>
+    <td class="tdclass"><img title="Fragrant Rice<br><font size='2'>Jay Chou</font>" alt="music/20.mp3" class="albumthumb" src="images/20.jpg"/></td>
+    <td class="tdclass"><img title="ブラック☆ロックシューター<br><font size='2'>Supercell</font>" alt="music/7.mp3" class="albumthumb" src="images/7.jpg"/></td>
+    <td class="tdclass"><img title="Good Time<br><font size='2'>Owl City</font>" alt="music/1.mp3" class="albumthumb" src="images/1.jpg"/></td>
+    <td class="tdclass"><img title="Tik Tok<br><font size='2'>Ke$ha</font>" alt="music/19.mp3" class="albumthumb" src="images/19.jpg"/></td>
+    <td class="tdclass"><img title="Sister's Noise<br><font size='2'>FripSide</font>" alt="music/11.mp3" class="albumthumb" src="images/11.jpg"/></td>
+    <td class="tdclass"><img title="Boys and Girls<br><font size='2'>浜崎あゆみ</font>" alt="music/10.mp3" class="albumthumb" src="images/10.jpg"/></td>
+    <td class="tdclass"><img title="F*** With Me You Know You Got It<br><font size='2'>Jay Z</font>" alt="music/12.mp3" class="albumthumb" src="images/12.jpg"/></td>
+    <td class="tdclass"><img title="Ignorance<br><font size='2'>Paramore</font>" alt="music/13.mp3" class="albumthumb" src="images/13.jpg"/></td>
+    <td class="tdclass"><img title="What You Know<br><font size='2'>T.I.</font>" alt="music/16.mp3" class="albumthumb" src="images/16.jpg"/></td>
+    <td class="tdclass"><img title="Core Pride<br><font size='2'>UVERworld</font>" alt="music/18.mp3" class="albumthumb" src="images/18.jpg"/></td>
+    <td class="tdclass"><img title="Tik Tok<br><font size='2'>Ke$ha</font>" alt="music/19.mp3" class="albumthumb" src="images/19.jpg"/></td>
+    <td class="tdclass"><img title="Good Time<br><font size='2'>Owl City</font>" alt="music/1.mp3" class="albumthumb" src="images/1.jpg"/></td>
+  </tr>
+  <tr>
+   	<td class="tdclass"><img title="F*** With Me You Know You Got It<br><font size='2'>Jay Z</font>" alt="music/12.mp3" class="albumthumb" src="images/12.jpg"/></td>
+    <td class="tdclass"><img title="Sister's Noise<br><font size='2'>FripSide</font>" alt="music/11.mp3" class="albumthumb" src="images/11.jpg"/></td>
+    <td class="tdclass"><img title="Love and Roll<br><font size='2'>Supercell</font>" alt="music/15.mp3" alt="music/15.mp3" class="albumthumb" src="images/15.jpg"/></td>
+    <td class="tdclass"><img title="Ignorance<br><font size='2'>Paramore</font>" alt="music/13.mp3" class="albumthumb" src="images/13.jpg"/></td>
+    <td class="tdclass"><img title="By The Way<br><font size='2'>Red Hot Chilli Peppers</font>" alt="music/14.mp3" class="albumthumb" src="images/14.jpg"/></td>
+    <td class="tdclass"><img title="King Sh*t<br><font size='2'>Yo Gotti Feat. T.I.</font>" alt="music/8.mp3" class="albumthumb" src="images/8.jpg"/></td>
+    <td class="tdclass"><img title="Boys and Girls<br><font size='2'>浜崎あゆみ</font>" alt="music/10.mp3" class="albumthumb" src="images/10.jpg"/></td>
+    <td class="tdclass"><img title="明明就<br><font size='2'>Jay Chou</font>" alt="music/2.mp3" class="albumthumb" src="images/2.jpg"/></td>
+    <td class="tdclass"><img title="Crow Song<br><font size='2'>ガルデモ</font>" alt="music/3.mp3" class="albumthumb" src="images/3.jpg"/></td>
+    <td class="tdclass"><img title="Let's Ride<br><font size='2'>The Game</font>" alt="music/5.mp3" class="albumthumb" src="images/5.jpg"/></td>
+    <td class="tdclass"><img title="ブラック☆ロックシューター<br><font size='2'>Supercell</font>" alt="music/7.mp3" class="albumthumb" src="images/7.jpg"/></td>
+    <td class="tdclass"><img title="King Sh*t<br><font size='2'>Yo Gotti Feat. T.I.</font>" alt="music/8.mp3" class="albumthumb" src="images/8.jpg"/></td>
+    <td class="tdclass"><img title="Boys and Girls<br><font size='2'>浜崎あゆみ</font>" alt="music/10.mp3" class="albumthumb" src="images/10.jpg"/></td>
+    <td class="tdclass"><img title="Good Time<br><font size='2'>Owl City</font>" alt="music/1.mp3" class="albumthumb" src="images/1.jpg"/></td>
+    <td class="tdclass"><img title="ブラック☆ロックシューター<br><font size='2'>Supercell</font>" alt="music/7.mp3" class="albumthumb" src="images/7.jpg"/></td>
+    <td class="tdclass"><img title="Feel My Soul<br><font size='2'>YUI</font>" alt="music/6.mp3" class="albumthumb" src="images/6.jpg"/></td>
+  </tr>
+  
+  
+</table>
+
+<div id="playlist">Playlist Three</div>	 
+</div>
+
+</section>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--<div id="bg">
+  <img id="imgblur" src="background.jpg" alt="">
+
+</div>-->
+<div id="songname">
+
+
+</div>
+
+<center>
+<div id="audiodiv">
+<audio id="video" class="audio" autoplay >
+ 
+  <source id="music" src="" type="audio/mpeg">
+
+</audio>
+
+</div>
+</center>
+<!--</div>-->
+
+
+
+
+
+<script type="text/javascript" src="pageslide.min.js"></script>
+<script>
+	$("a.first").pageslide();
+</script>
+</body>
+<script>
+			// Grab a handle to the video (used throughout the functions)
+			var video = document.getElementById("video");
+			// Turn off the default controls
+			video.controls = false;
+			
+			// Event Listening
+			// Listens for the 'timeupdate' event to be raised by the video, and calls the updateProgress() function to update the progress bar
+			video.addEventListener("timeupdate", updateProgress, false);
+			// Listens for the 'play' event to be raised and changes the play/pause button's text to 'pause'
+			
+			// togglePlayPause - toggles the play/pause button
+		
+			// setVolume - sets the video's volume
+		
+			// updateProgress - updates the video's progress bar
+			function updateProgress() {
+				var progress = document.getElementById("progress");
+				var value = 0;
+				if (video.currentTime > 0) {
+					value = Math.floor((100 / video.duration) * video.currentTime);
+				}
+				progress.style.width = value + "%";
+			}
+						
+		
+		
+			
+		</script>
+        
+        <script>
+function aud_play_pause() {
+  var myAudio = document.getElementById("video");
+  if (myAudio.paused) {
+    myAudio.play();
+  } else {
+    myAudio.pause();
+  }
+}
+</script>
+</html>
